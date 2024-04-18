@@ -51,4 +51,6 @@ body {
   color: #ffffff;
 }
 .wrap {
+  padding-top: 70px;
+  position: relative;
 }

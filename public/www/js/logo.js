@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
     logoSlide.autoplay.start();
   });
   headerLogoLink.addEventListener("mouseleave", function () {
-    logoSlide.autoplay.start();
+    logoSlide.autoplay.stop();
     logoSlide.slideTo(0);
   });
 }); //html 태그 참조시 무조건 요거 써라

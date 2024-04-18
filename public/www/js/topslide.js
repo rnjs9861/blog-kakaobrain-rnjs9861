@@ -52,6 +52,17 @@ window.addEventListener("load", function () {
       console.log(error);
     });
 
+  //   logoSlide.autoplay.stop();
+
+  // const headerLogoLink = document.querySelector(".header-logo-link");
+  // headerLogoLink.addEventListener("mouseenter", function () {
+  //   logoSlide.autoplay.start();
+  // });
+  // headerLogoLink.addEventListener("mouseleave", function () {
+  //   logoSlide.autoplay.start();
+  //   logoSlide.slideTo(0);
+  // });
+
   //then->성공했을때 catch->에러 났을때
 
   //2. 자료를 이용해서 슬라이드에 배치할 html 을 만든다.
