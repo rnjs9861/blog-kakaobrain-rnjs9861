@@ -1,25 +1,36 @@
 window.addEventListener("load", function () {
-  function showLine() {
+  //document = html, querySelector = css
+  const header = document.querySelector(".header");
+  //변경되는 css클래스명
+  const headerActiveClass = "line-active";
+  //class가 적용되는 최소 높이값
+  const headerActiveValue = 0;
+
+  //   스크롤 바의 위치에 따라서 css 적용 함수
+  //  _html : 대상 html 태그
+  //  _tgY : css 가 적용될 위치 값
+  // _active : 적용할 css 클래스명
+  // _scY : 스크롤 바의 위치
+
+  function showLine(_html, _tgY, _active, _scY) {
     // 브라우저의 스크롤바 위치를 파악해야함
     // 현재 스크롤바의 위치값 알아내기
-    let scY = window.scrollY;
+    //scY = window.scrollY; 매개변수를 만들었으니 필요 없어!
     // scY 즉, 스크롤바의 위치가 0 보다 크면 스크롤 된거다
     // header 에 라인의 css를 적용한다.
 
-    //document = html, querySelector = css
-    const header = document.querySelector(".header");
-    if (scY > 0) {
+    if (_scY > _tgY) {
       // header 객체, 즉, DOM 에 css 목록에 추가하자 (클래스명)
-      header.classList.add("line-active");
+      _html.classList.add(_active);
     } else {
       // header 객체, 즉, DOM 에 css 제거에 추가하자 (클래스명)
-      header.classList.remove("line-active");
+      _html.classList.remove(_active);
     }
   }
 
-  showLine();
+  showLine(header, headerActiveValue, headerActiveClass, window.scrollY);
 
   window.addEventListener("scroll", function () {
-    showLine();
+    showLine(header, headerActiveValue, headerActiveClass, window.scrollY);
   });
 });

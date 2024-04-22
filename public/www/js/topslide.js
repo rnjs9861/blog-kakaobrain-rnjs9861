@@ -42,26 +42,24 @@ window.addEventListener("load", function () {
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination-bullet-active",
           clickable: "true",
         },
+      });
+      const logos = document.querySelector(".topslide");
+
+      logos.addEventListener("mouseenter", function () {
+        topSlide.autoplay.stop();
+      });
+
+      logos.addEventListener("mouseleave", function () {
+        topSlide.autoplay.start();
       });
     })
 
     .catch((error) => {
       console.log(error);
     });
-
-  //   logoSlide.autoplay.stop();
-
-  // const headerLogoLink = document.querySelector(".header-logo-link");
-  // headerLogoLink.addEventListener("mouseenter", function () {
-  //   logoSlide.autoplay.start();
-  // });
-  // headerLogoLink.addEventListener("mouseleave", function () {
-  //   logoSlide.autoplay.start();
-  //   logoSlide.slideTo(0);
-  // });
 
   //then->성공했을때 catch->에러 났을때
 
