@@ -39,3 +39,7 @@ window.addEventListener("load", function () {
     logoSlide.slideTo(0);
   });
 }); //html 태그 참조시 무조건 요거 써라
+
+window.addEventListener("load", function () {
+  const logoSlide = new Swiper(".swlogo", {});
+});
