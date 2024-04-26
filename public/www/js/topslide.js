@@ -46,13 +46,14 @@ window.addEventListener("load", function () {
           clickable: "true",
         },
       });
-      const logos = document.querySelector(".topslide");
 
-      logos.addEventListener("mouseenter", function () {
+      // 4. 마우스 오버시 슬라이드를 일시 멈춤 및 재실행
+      const slideArea = document.querySelector(".topslide");
+      slideArea.addEventListener("mouseenter", function () {
         topSlide.autoplay.stop();
       });
 
-      logos.addEventListener("mouseleave", function () {
+      slideArea.addEventListener("mouseleave", function () {
         topSlide.autoplay.start();
       });
     })

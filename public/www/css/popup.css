@@ -1,0 +1,44 @@
+.popup {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+  position: relative;
+  width: 60%;
+  padding: 50px;
+  background: #fff;
+  line-height: 20px;
+  border-radius: 20px;
+}
+.pop-content strong {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* 아래 position: absolute는 위 popup-content의 position을 기준으로 따라간다.
+relative는 내가 기준이란 의미이다. */
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup-close:hover {
+  background: hotpink;
+  color: #fff;
+}
