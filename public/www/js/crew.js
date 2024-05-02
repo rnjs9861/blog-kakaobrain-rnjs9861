@@ -9,22 +9,22 @@ window.addEventListener("load", function () {
     // 아래 코드는 최적화 실패
     // for (let i = 0; i < total; i++) {
     //   const obj = _result[i];
-    //   const tag = `<a href="${obj.link}" class="list-box">
+    //   const tag = `<a href="${obj.link}" className="list-box">
     //   <div
-    //     class="list-box-image br-20"
+    //     className="list-box-image br-20"
     //     style="
     //       background: url('./images/${obj.imgpath}') no-repeat center;
     //       background-size: cover;
     //     "
     //   ></div>
-    //   <div class="list-box-cate">
+    //   <div className="list-box-cate">
     //     <img src="./images/icon/${obj.icon}" alt="카카오브레인" />
     //     <span>${obj.category}</span>
     //   </div>
-    //   <p class="list-box-title">
+    //   <p className="list-box-title">
     //     ${obj.title}
     //   </p>
-    //   <span class="list-box-day">${obj.day}</span> </a
+    //   <span className="list-box-day">${obj.day}</span> </a
     // >`;
     //   allTag += tag;
     //   console.log(obj);
@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
     _result.forEach((item) => {
       const tag = `<a href="${item.link}" class="list-box">
       <div
-        class="list-box-image br-20"
+      class="list-box-image br-20"
         style="
           background: url('./images/${item.imgpath}') no-repeat center;
           background-size: cover;

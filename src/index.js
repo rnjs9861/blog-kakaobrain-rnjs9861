@@ -1,19 +1,30 @@
 import ReactDOM from "react-dom/client";
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
+import Header from "./components/Header";
+import MbHeader from "./components/MbHeader";
+import Footer from "./components/Footer";
+import MainTop from "./components/MainTop";
+import MainBottom from "./components/MainBottom";
+
+import "./css/reset.css";
+import "./css/common.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// 상단에 출력할 JSX
 
-// 메인에 출력할 JSX
-
-// 하단에 출력할 JSX
+//컴포넌트 만들기
 
 root.render(
-  <div class="wrap">
-    <Header></Header>
-    <Main></Main>
-    <Footer></Footer>
-  </div>
+  <>
+    {/* <Popup></Popup> */}
+    <div className="wrap">
+      <Header></Header>
+      <MbHeader></MbHeader>
+      <div className="main">
+        <div className="inner">
+          <MainTop></MainTop>
+          <MainBottom></MainBottom>
+        </div>
+      </div>
+      <Footer></Footer>
+    </div>
+  </>
 );
