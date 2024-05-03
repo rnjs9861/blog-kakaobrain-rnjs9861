@@ -1,10 +1,56 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../css/header.css";
 
 const Header = function () {
+  const header = useRef(null);
+
+  //js 코딩 자리\
+  //JSX Element 렌더링 완료시
+  useEffect(() => {
+    const header = header.current;
+    const headerActiveClass = "line-active";
+    const headerActiveValue = 0;
+    function showLine(_html, _tgY, _active, _scY) {
+      if (_scY > _tgY) {
+        _html.classList.add(_active);
+      } else {
+        _html.classList.remove(_active);
+      }
+    }
+    showLine(
+      header.current,
+      headerActiveValue,
+      headerActiveClass,
+      window.scrollY
+    );
+    window.addEventListener("scroll", function () {
+      showLine(
+        header.current,
+        headerActiveValue,
+        headerActiveClass,
+        window.scrollY
+      );
+    });
+    return () => {
+      window.removeEventListener("scroll", function () {
+        showLine(
+          header.current,
+          headerActiveValue,
+          headerActiveClass,
+          window.scrollY
+        );
+      });
+    };
+  }, []);
+
+  //JSON 연동시
+  useEffect(() => {
+    return () => {};
+  }, []);
+
   return (
     <>
-      <header className="header">
+      <header className="header" ref={header}>
         <div className="inner">
           <div className="header-logo">
             <a href="index.html" className="header-logo-link">

@@ -7,6 +7,7 @@ import MainBottom from "./components/MainBottom";
 
 import "./css/reset.css";
 import "./css/common.css";
+import Popup from "./components/Popup";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -14,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    {/* <Popup></Popup> */}
+    <Popup></Popup>
     <div className="wrap">
       <Header></Header>
       <MbHeader></MbHeader>
