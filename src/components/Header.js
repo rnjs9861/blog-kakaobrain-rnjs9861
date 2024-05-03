@@ -8,7 +8,6 @@ const Header = function () {
   //JSX Element 렌더링 완료시
   useEffect(() => {
     // const header = document.querySelector(".header");
-
     const headerActiveClass = "line-active";
     const headerActiveValue = 0;
     function showLine(_html, _tgY, _active, _scY) {
