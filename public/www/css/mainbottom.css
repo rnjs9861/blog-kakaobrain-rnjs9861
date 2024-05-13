@@ -1,10 +1,3 @@
-.slide-title {
-  font-size: 40px;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: right;
-}
-
 .main-bottom {
   width: 100%;
   display: flex;
@@ -15,61 +8,68 @@
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 700;
-  color: black;
+  color: #000;
 }
+
 .list-wrap {
   display: flex;
+
   gap: 2.56%;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 60px;
 }
+
 .list-box {
   width: 30%;
   display: block;
+
   margin-bottom: 30px;
 }
-.list-box:hover .list-box-image {
+
+.list-box:hover .list-box-img {
   transform: translateY(-10px);
   filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.2));
 }
 
-.list-box-image {
+.list-box-img {
   width: 100%;
   height: 17.09vw;
   max-height: 200px;
   margin-bottom: 24px;
   overflow: hidden;
+
   transition: all 0.2s ease-in;
 }
+
 .list-box-cate {
   display: flex;
   gap: 4px;
   align-items: center;
   margin-bottom: 18px;
 }
-
 .list-box-cate img {
   width: 24px;
   height: 24px;
 }
-
 .list-box-cate span {
   font-size: 14px;
   font-weight: 700;
   color: #e700a7;
 }
+
 .list-box-title {
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
-  color: black;
+  color: #000000;
   word-break: keep-all;
 }
+
 .list-box-day {
   font-size: 14px;
-  color: #ccc;
+  color: #cccccc;
 }
 
 .main-bottom-list {
@@ -82,6 +82,7 @@
   margin-bottom: 60px;
   overflow: hidden;
 }
+
 .list-banner-link {
   width: 100%;
   height: 160px;
@@ -112,8 +113,7 @@
   .list-box {
     width: 100%;
   }
-
-  .list-box-image {
+  .list-box-img {
     height: 74.21vw;
     max-height: 760px;
   }
@@ -123,7 +123,6 @@
   width: 25.64%;
   max-width: 300px;
 }
-/* 760/1024 * 100 = 74.21vw max-height=760 */
 
 .card-link {
   width: 100%;
@@ -131,13 +130,13 @@
   display: flex;
   align-items: flex-end;
   margin-bottom: 30px;
+
   overflow: hidden;
   background: url("../images/p1.png") no-repeat center;
   background-size: cover;
 
-  /* 배치된 내용 의 좌표(x, y) 가 이동한다. */
+  /* 배치된 내용의 좌표(x, y) 가 이동한다. */
   transition: all 0.2s ease-in;
-  /* all 대신 transition 적어도 됨 */
 }
 .card-link:hover {
   transform: translateY(-10px);
@@ -150,9 +149,8 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
-
 .card-title {
   font-size: 18px;
   font-weight: 700;
@@ -165,7 +163,7 @@
   background: rgba(255, 255, 255, 0.1);
   font-size: 10px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   border-radius: 10px;
 }
 
@@ -175,6 +173,7 @@
     width: 1024px;
     max-width: 1024px;
   }
+
   .card-link {
     width: 240px;
     height: 266px;

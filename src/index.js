@@ -1,31 +1,36 @@
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import MbHeader from "./components/MbHeader";
+import Popup from "./components/Popup";
 import Footer from "./components/Footer";
-import MainTop from "./components/MainTop";
-import MainBottom from "./components/MainBottom";
-
+import Main from "./components/Main";
 import "./css/reset.css";
 import "./css/common.css";
-import Popup from "./components/Popup";
+import { useState } from "react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-//컴포넌트 만들기
+const Wrap = () => {
+  // js 코드 자리
+  const [mbMenuOpen, setMbMenuOpen] = useState(false);
+  const clickMbbt = () => {
+    setMbMenuOpen((prev) => {
+      return !prev;
+    });
+  };
 
+  return (
+    <div className="wrap">
+      <Header clickMbbt={clickMbbt} mbMenuOpen={mbMenuOpen}></Header>
+      <MbHeader mbMenuOpen={mbMenuOpen} setMbMenuOpen={setMbMenuOpen}></MbHeader>
+      <Main></Main>
+      <Footer></Footer>
+    </div>
+  );
+};
 root.render(
   <>
     <Popup></Popup>
-    <div className="wrap">
-      <Header></Header>
-      <MbHeader></MbHeader>
-      <div className="main">
-        <div className="inner">
-          <MainTop></MainTop>
-          <MainBottom></MainBottom>
-        </div>
-      </div>
-      <Footer></Footer>
-    </div>
+    <Wrap></Wrap>
   </>
 );
