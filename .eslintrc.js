@@ -20,9 +20,10 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {"no-unused-vars": "off",
-  "react/prop-types": "off",
-  "react/react-in-jsx-scope":"off",
-  "no-undef": "off",
-}, //warn-경고 -> 알려는 주되 무시 // off시 그냥 무시
+  rules: {
+    "no-unused-vars": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+  },
 };

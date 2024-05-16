@@ -6,16 +6,17 @@ const Header = function ({ clickMbbt, mbMenuOpen }) {
   //const clickMbbt = props.clickMbbt;
   // js 코딩 자리
   // 마우스 오버 상태
-  const [ isOver, setIsOver] = useState(false);
+  const [isOver, setIsOver] = useState(false);
 
   const header = useRef(null);
   // 모바일 메뉴 관련
   const mbBt = useRef(null);
   // 로고 영역
   const headerLogoLink = useRef(null);
+
   // JSX Element  렌더링 완료시
   useEffect(() => {
-    //const headerLogoLink = document.querySelector(".header-logo-link");
+    // const headerLogoLink = document.querySelector(".header-logo-link");
     headerLogoLink.current.addEventListener("mouseenter", function () {
       // logoSlide.autoplay.start();
       setIsOver(true);
@@ -97,7 +98,11 @@ const Header = function ({ clickMbbt, mbMenuOpen }) {
       <div className="inner">
         {/* <!-- 상단 로고 --> */}
         <div className="header-logo">
-          <a href="index.html" className="header-logo-link" ref={headerLogoLink}>
+          <a
+            href="index.html"
+            className="header-logo-link"
+            ref={headerLogoLink}
+          >
             <img
               src="./images/etc/logo-kakao.png"
               alt="카카오브레인 블로그"
