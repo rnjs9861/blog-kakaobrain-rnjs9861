@@ -12,11 +12,42 @@ function App() {
   return (
     <div className="App">
       <div>
-        <button onClick={getTodos}>읽기</button>
-        <button onClick={getOneTodos}>하나만</button>
-        <button onClick={postTodos}>쓰기</button>
-        <button onClick={deleteTodos}>삭제</button>
-        <button onClick={putTodos}>수정</button>
+        <button
+          onClick={() => {
+            getTodos();
+          }}
+        >
+          읽기
+        </button>
+        <button
+          onClick={() => {
+            getOneTodos(2);
+          }}
+        >
+          하나만 읽기
+        </button>
+        <button
+          onClick={() => {
+            const gogo = { id: 50, content: "새할일", completed: false };
+            postTodos(gogo);
+          }}
+        >
+          쓰기
+        </button>
+        <button
+          onClick={() => {
+            deleteTodos(50);
+          }}
+        >
+          삭제
+        </button>
+        <button
+          onClick={() => {
+            putTodos({ id: 30, content: "수정이지요" });
+          }}
+        >
+          수정
+        </button>
       </div>
 
       <header className="App-header">

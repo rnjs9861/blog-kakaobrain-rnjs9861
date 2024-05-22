@@ -4,12 +4,12 @@ window.addEventListener("load", function () {
   const dataUrl = "./apis/topslide.json";
 
   fetch(dataUrl)
-    .then((response) => {
+    .then(response => {
       const data = response.json();
       // 변환된 결과를 돌려주기
       return data;
     })
-    .then((result) => {
+    .then(result => {
       // Step 2. json 변경된 데이터 활용하기
       // 전체 글자 모음
       let slideTags = "";
@@ -56,7 +56,7 @@ window.addEventListener("load", function () {
         topSlide.autoplay.start();
       });
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
     });
 });
