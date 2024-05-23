@@ -22,7 +22,6 @@ const Wrap = () => {
 
   return (
     <div className="wrap">
-      <App></App>
       <Header clickMbbt={clickMbbt} mbMenuOpen={mbMenuOpen}></Header>
       <MbHeader
         mbMenuOpen={mbMenuOpen}
