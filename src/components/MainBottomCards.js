@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MainBottomCardsItem from "./MainBottomCardsItem";
+import { getCards, getNews } from "../apis/api";
 
 const MainBottomCards = () => {
   const [cardSlide, setCardSlide] = useState(null);
@@ -40,21 +41,15 @@ const MainBottomCards = () => {
     };
   }, [cardSlide]);
 
-  // hook 자리
+  const getCardsCall = async () => {
+    const result = await getCards();
+    setCardList(result);
+    makeCardSlide();
+  };
+
   useEffect(() => {
-    const dataUrl = "./apis/cards.json";
-    fetch(dataUrl)
-      .then(response => {
-        const result = response.json();
-        return result;
-      })
-      .then(result => {
-        setCardList(result);
-        makeCardSlide();
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    //axios 호출 조심하자. await이 필요 -> 함수 만들자
+    getCardsCall();
     return () => {};
   }, []);
 

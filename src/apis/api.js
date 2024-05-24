@@ -5,10 +5,10 @@ const API_URL = `${SERVER_URL}/apis`;
 
 export const getBanner = async () => {
   try {
-    const resp = await axios.get(`${API_URL}/banner.json`);
+    const res = await axios.get(`${API_URL}/banner.json`);
     const status = res.status.toString().charAt(0);
     if (status === "2") {
-      console.log(res.data);
+      return res.data;
     } else {
       console.log("API 오류");
     }
@@ -19,10 +19,10 @@ export const getBanner = async () => {
 
 export const getCards = async () => {
   try {
-    const resp = await axios.get(`${API_URL}/cards.json`);
+    const res = await axios.get(`${API_URL}/cards.json`);
     const status = res.status.toString().charAt(0);
     if (status === "2") {
-      console.log(res.data);
+      return res.data;
     } else {
       console.log("API 오류");
     }
@@ -33,10 +33,10 @@ export const getCards = async () => {
 
 export const getCrew = async () => {
   try {
-    const resp = await axios.get(`${API_URL}/crew.json`);
+    const res = await axios.get(`${API_URL}/crew.json`);
     const status = res.status.toString().charAt(0);
     if (status === "2") {
-      console.log(res.data);
+      return res.data;
     } else {
       console.log("API 오류");
     }
@@ -47,10 +47,10 @@ export const getCrew = async () => {
 
 export const getNews = async () => {
   try {
-    const resp = await axios.get(`${API_URL}/news.json`);
+    const res = await axios.get(`${API_URL}/news.json`);
     const status = res.status.toString().charAt(0);
     if (status === "2") {
-      console.log(res.data);
+      return res.data;
     } else {
       console.log("API 오류");
     }
@@ -61,10 +61,10 @@ export const getNews = async () => {
 
 export const getTopSlide = async () => {
   try {
-    const resp = await axios.get(`${API_URL}/topslide.json`);
+    const res = await axios.get(`${API_URL}/topslide.json`);
     const status = res.status.toString().charAt(0);
     if (status === "2") {
-      console.log(res.data);
+      return res.data;
     } else {
       console.log("API 오류");
     }
