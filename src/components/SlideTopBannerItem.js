@@ -12,11 +12,9 @@ const SlideTopBannerItem = ({ url, pic, title }) => {
   }, []);
 
   return (
-    <SwiperSlide>
-      <a href={url} style={{ styleObj }}>
-        <p className="slide-title">{title}</p>
-      </a>
-    </SwiperSlide>
+    <a href={url} style={{ styleObj }}>
+      <p className="slide-title">{title}</p>
+    </a>
   );
 };
 

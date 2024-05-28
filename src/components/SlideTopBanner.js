@@ -12,6 +12,16 @@ const SlideTopBanner = () => {
   const whereTag = useRef(null);
   // 데이터
   const [topSlideData, setTopSlideData] = useState([]);
+  //
+  const swiperOption = {
+    loop: true,
+    pagination: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    modules: [Pagination],
+  };
 
   const getBannerCall = async () => {
     const result = await getBanner();
@@ -26,23 +36,16 @@ const SlideTopBanner = () => {
 
   return (
     <div className="main-top-banner br-20">
-      <Swiper
-        className="bannerslide"
-        loop={true}
-        pagination={{
-          el: ".swiper-pagination",
-          clickable: true,
-        }}
-        modules={[Pagination]}
-      >
+      <Swiper className="bannerslide" {...swiperOption}>
         {/* 데이터 출력 */}
         {topSlideData.map((item, index, arr) => (
-          <SlideTopBannerItem
-            key={index}
-            url={item.url}
-            pic={item.pic}
-            title={item.title}
-          ></SlideTopBannerItem>
+          <SwiperSlide key={index}>
+            <SlideTopBannerItem
+              url={item.url}
+              pic={item.pic}
+              title={item.title}
+            ></SlideTopBannerItem>
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>
